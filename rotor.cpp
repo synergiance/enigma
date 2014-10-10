@@ -30,6 +30,11 @@ bool rotor::setRotor(const char * setting) {
             return false;
         }
     }
+    for (int c = 0; c < 25; c++) {
+        for (int d = c + 1; d < 26; d++) {
+            if (letters[c] == letters[d]) return false;
+        }
+    }
     isSet = true;
     return true;
 }
